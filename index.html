@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Linux, commandes fondamentales</title>
+    <link href='http://fonts.googleapis.com/css?family=Chelsea+Market' rel='stylesheet' type='text/css'>  
+	  <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+
+
+  <div class="block block-title">
+    <h1>Linux - commandes fondamentales</h1>
+    <p>Un petit guide pour bien démarrer avec Linux.</p>
+    <img alt="" src="img/arrow.png">
+  </div>
+
+
+  <a name="X"></a>
+  <div class="block block-X">
+    <h2></h2>
+    <p>
+    </p>
+  </div>
+
+
+  <a name="ls"></a>
+  <div class="block block-ls">
+    <h2>ls</h2>
+    <h4>La commande <strong>ls</strong> permet d'afficher le contenu d'un répertoire.</h4>
+    <p><code>ls -l</code> Afficher les informations de manière détaillée.</p>
+    <p><code>ls -a</code> Afficher les fichiers cachés.</p>
+    <p><code>ls -h</code> Afficher la taille des fichiers de facon lisible.</p>
+    <p><code>ls -r</code> Tri inversé.</p>
+    <p><code>ls -t</code> Trier les fichiers par date du plus récent au plus ancien.</p>
+    <p><code>ls -S</code> Trier par taille décroissante.</p>
+    <p><code>ls -la</code>  Affiche toutes informations des fichiers cachés ou non.</p>
+    <p><code>ls -lhS</code> Affiche toutes informations des fichiers, avec des tailles lisible le tout ordonné du plus grand au plus petit.</p>
+  </div>
+
+  <a name="cd"></a>
+  <div class="block block-cd">
+    <h2>cd</h2>
+    <h4>La navigation d’un répertoire à un autre s’effectue avec la commande <strong>cd</strong> succédé du nom du répertoire</h4>
+    <p><code>cd /</code> permet de se retrouver à la racine du disque.</p>
+    <p><code>cd /home/</code> ou <code>cd ~</code> accès directement au répertoire de l’utilisateur.</p>
+    <p><code>cd /var/www/</code> va dans le repertoire /var/www.</p>
+    <p><code>cd ..</code> pour remonter dans le répertoire parent à partir de la ou vous êtes.</p>
+    <p><code>cd -</code> permet de revenir au répertoire précédent.</p>
+    <p><code>pwd</code> renvoi le chemin absolu du répertoire courant ce qui est utile puisqu’en général le shell n’affiche que le nom du répertoire courant.</p>
+  </div>
+  
+  <a name="cp"></a>
+  <div class="block block-cp">
+    <h2>cp</h2>
+    <h4>Pour créer une copie d’un fichier on utilise la commande <strong>cp</strong>.</h4>
+    <p><code>cp foo/bar.txt baz/bar.txt</code> Copie le fichier bar.txt dans le répertoire baz.<p>
+    <p><code>cp -r foo/ baz/</code>Copier des répertoires entiers (recursively).</p>
+  </div>
+  
+  <a name="mv"></a>
+  <div class="block block-mv">
+    <h2>mv</h2>
+    <h4>Déplacer un fichier est aussi simple que de le copier, pour cela il faut utiliser la commande <strong>mv</strong>. Cette commande permet aussi de renommer vos fichiers</h4> 
+    <p><code>mv foo/bar.txt baz/bar.txt</code> Déplacer le fichier bar.txt dans le répertoire baz.</p>
+    <p><code>mv foo_bar.txt foo_baz.txt</code> Renommer le fichier foo_bar.txt en foo_baz.txt.</p>
+  </div>
+  
+  <a name="rm"></a>
+  <div class="block block-rm">
+    <h2>rm</h2>
+    <h4>Pour effacer un fichier ou un répertoire on utilise la commande <strong>rm</strong>.</h4>
+    <p><code>*.txt</code> Supprimer tous les fichiers ayant pour extension txt.</p>
+    <p><code>rm foo.txt bar.txt</code> supprime les fichiers foo.txt et bar.txt.</p>
+    <p><code>rm -rf baz/</code> supprime tous les fichiers contenu dans le répertoire baz.</p>
+  </div>
+
+  <a name="mkdir"></a>
+  <div class="block block-mkdir">
+    <h2>mkdir</h2>
+    <h4>Pour créer un répertoire il suffit d’utiliser la commande mkdir. Celle-ci vous permettra de créer un répertoire à l’emplacement ou vous vous trouvez ou à l’emplacement précisé en argumente de la commande.</h4>
+    <p><code>mkdir -v</code> Retourne un message pour chaque répertoire crées.</p>
+    <p><code>mkdir -p</code> Cette option permet de créer une arborescence complète.</p>
+    <p><code>mkdir foo</code> Création du répertoire foo.</p>
+    <p><code>mkdir -v foo /tmp/bar</code> Création des répertoires foo et /tmp/bar.</p>
+    <p><code>mkdir -p foo/bar/baz</code> Création de l’arborescence foo/bar/baz.</p>
+  </div>
+
+  <a name="chown"></a>
+  <div class="block block-chown">
+    <h2>chmod</h2>
+    <h4>La commande <strong>chown</strong> permet de changer le propriétaire d'un fichier ou répertoire.</h4>
+    <p><code>chown bob:admin foo.txt</code> attribut le fichier foo.txt à l’utilisateur bob et au groupe admin.</p>
+  </div>
+
+  <a name="chmod"></a>
+  <div class="block block-chmod">
+    <h2>chown</h2>
+    <h4>La commande chown permet de changer le propriétaire d'un fichier ou répertoire. Pour executer cette commande vous devez etre le propriétaire du fichier ou etre logué en root.</h4>
+    <p>Methode alphanumérique</p>
+    <p><code>chmod u+w fichier</code> Ajouter les droits en écriture au propriétaire (user, write)</p>
+    <p><code>chmod g+r fichier</code> Ajouter les droits en lecture au groupe du fichier (group, read)</p>
+    <p><code>chmod o-x fichier</code> Supprimer les droits d'execution aux autres utilisateurs (other, execution)</p>
+    <p><code>chmod a+rw dossier</code> Ajouter les droits lecture / écriture à tous (all)</p>
+    <p><code>chmod -R a+rx files</code>  Ajouter les droits en lecture et en exécution à tout ce que contient le repertoire dossier.</p>
+
+    <p>Methode octale</p>
+    <p><code>chmod 764 dossier</code> Tous les droits pour le propriétaire (7xx), lecture et ecriture pour le groupe (x6x) et lecture uniquement pour les autres (xx4).</p>
+    <p><code>chmod -R 755 dossier</code> Donner au propriétaire tous les droits (7xx), alors que seul les droits de lecture et d'accès seront donné au autres (x55). Grace à l'option -R ces droits seront appliqués à tous les fichiers et dossier contenu dans ce repertoire.</p>
+
+    <table><tbody>
+      <tr><th colspan="3">Correspondances de représentation des droits</th></tr>
+      <tr><th>Droit</th><th>Valeur alphanumérique</th><th>Valeur octale</th></tr>
+      <tr><td>aucun droit</td><td align="center">---</td><td align="center">0</td></tr>
+      <tr><td>exécution seulement</td><td align="center">--x</td><td align="center">1</td></tr>
+      <tr><td>écriture seulement</td><td align="center">-w-</td><td align="center">2</td></tr>
+      <tr><td>ecriture et exécution</td><td align="center">-wx</td><td align="center">3</td></tr>
+      <tr><td>lecture seulement</td><td align="center">r--</td><td align="center">4</td></tr>
+      <tr><td>lecture et exécution</td><td align="center">r-x</td><td align="center">5</td></tr>
+      <tr><td>lecture et écriture</td><td align="center">rw-</td><td align="center">6</td></tr>
+      <tr><td>tous les droits (lecture, écriture et exécution)</td><td align="center">rwx</td><td align="center">7</td></tr>
+    </tbody></table>
+  </div>
+
+
+  <a name="aptitude"></a>
+  <div class="block block-aptitude">
+    <h2>aptitude</h2>
+    <p>
+    </p>
+  </div>
+
+  <a name="ssh"></a>
+  <div class="block block-ssh">
+    <h2>ssh</h2>
+    <p>
+    </p>
+  </div>
+
+  <a name="rsync"></a>
+  <div class="block block-rsync">
+    <h2>rsync</h2>
+    <p>
+    </p>
+  </div>
+
+  <a name="sed"></a>
+  <div class="block block-sed">
+    <h2>sed</h2>
+    <p>
+    </p>
+  </div>
+
+  <a name="grep"></a>
+  <div class="block block-grep">
+    <h2>grep</h2>
+    <p>
+    </p>
+  </div>
+
+  <a name="find"></a>
+  <div class="block block-find">
+    <h2>find</h2>
+    <h4>La commande <strong>find</strong> permet de chercher des fichiers et éventuellement d'exécuter des commandes sur ceux-ci.</h4>
+    <dl>
+      <dt>Options :</dt>
+      <dd>-name : Recherche d'un fichier par son nom</dd>
+      <dd>-iname : Même chose que -name mais insensible à la casse</dd>
+      <dd>-type : Recherche de fichier d'un certain type</dd>
+      <dd>-atime : Recherche par date de dernier accès</dd>
+      <dd>-mtime : Recherche par date de dernière modification</dd>
+      <dd>-user : Recherche de fichiers appartenant à l'utilisateur donné</dd>
+      <dd>-group : Recherche de fichiers appartenant au groupe donné</dd>
+      <dd>-size : Recherche par rapport à une taille de fichier.</dd>
+      <dd>-exec : Exécute la commande donnée aux fichiers trouvés.</dd >
+      <dd>-a : Opérateur ET</dd>
+      <dd>-o : Opérateur OU</dd>
+      <dd>! ou -not : Opérateur NOT</dd>
+    </dl>  
+    <p><code>find myfile* -print</code> <br />Rechercher un fichier commençant par "myfile"</p>
+    <p><code>find -name *myfile*.txt -print</code> <br />Rechercher un fichier contenant "myfile" et ayant pour extention ".txt"</p>
+    <p><code>find . -name ".*" -print</code> <br />Rechercher tous les fichiers cachés dans le répertoire courant et ses sous répertoires.</p>
+    <p><code>find /usr -type d -print</code> <br />Afficher tous les répertoires de /usr</p>
+    <p><code>find $HOME ( -name *.txt -o -name '*.pdf' ) -atime +7 -exec rm {} \;</code> <br />Supprimer tous les fichiers .txt ou .pdf qui n'ont pas été accédés depuis plus de 7 jours dans le répertoire home de l'utilisateur.</p>
+    <p><code>find $HOME -name '*.txt' -size 4k -exec ls -l {} \;</code> <br />Affiche la taille de tous les fichiers de plus de 2 kilos</p>
+  </div>
+
+  <a name="processus"></a>
+  <div class="block-processus">
+    <h2>Gestion des processus</h2>
+    <p><code>top</code> Classement en live des processus en cours triés par utilisation Proc, Mem ou Temps CPU.</p>
+    <p><code>free</code> Afficher la mémoire libre.</p>
+    <p><code>ps aux</code> Afficher tous les processus exécutés.</p>
+    <p><code>ps faux</code> Afficher tous les processus exécutés affiché sous forme.</p> 
+    <p><code>kill pid</code> Arrêter un processus.</p>
+    <p><code>kill ­9 pid</code> Tuer le processus</p> 
+  </div>
+
+    <a name="archives"></a>
+  <div class="block-archives">
+    <h2>Archives</h2>
+    <h4>Que ce soit pour compresser ou décompresser des fichiers ou des dossiers, cela se fait avec la commande <strong>tar</strong>.</h4>
+    <dl>
+      <dt>Options :</dt>
+      <dd>-c: créer</dd>
+      <dd>-t: tester / lister</dd>
+      <dd>-x: extraire</dd>
+      <dd>-v : description des fichiers désarchivés</dd>
+      <dd>-j: format de compression bzip2</dd>
+      <dd>-z: format de compression gzip</dd>
+    </dl>
+    <p><code>tar -cvf archive.tar fichier1</code> création d’une archive nommée archive.tar contenant le fichier fichier1.</p>
+    <p><code>tar -cvf archive.tar fichier1 fichier2</code> Création d’une archive contenant deux fichiers fichier1 et fichier2.</p>
+    <p><code>tar -cvf archive.tar repertoire/</code> Création d’une archive a partir d’un répertoire.</p>
+    <p><code>tar -czvf archive.tar.gz repertoire/</code> Création d’une archive au format tar.gz.</p>
+    <p><code>tar -cjvf archive.tar.bz2 repertoire/</code> Création d’une archive au format tar.bz2.</p>
+    <p><code>tar -xzvf archive.tar.gz</code> Extraction de l’archive tar.gz.</p>
+    <p><code>tar -xjvf archive.tar.bz2</code> Extraction de l’archive tar.bz2.</p>
+    <p><code>tar -tf mon_fichier.tar</code> Liste tous les fichiers contenus dans une archive.</p>
+  </div>
+
+  <a name="Commandes-utiles"></a>
+  <div class="block-utiles">
+    <h2>Commandes utiles</h2>
+    <p>
+    </p>
+  </div>
+      
+
+
+  <a name="X"></a>
+  <div class="block-X">
+    <h2></h2>
+    <p>
+    </p>
+  </div>
+</body>
+</html>
