@@ -1,37 +1,36 @@
 body {
-  background: #FFF;
-  font-family: Georgia, Times New Roman, Times, serif;
-  font-size: 23px;
-  margin: 0;
-  padding: 0;
+    background: #FFF;
+    font-family: Georgia, Times New Roman, Times, serif;
+    font-size: 23px;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
-  font-size: 60px;
-  font-weight: normal;
-  margin: 0;
-  font-family: 'Chelsea Market', Georgia, serif;
-  color: #000;
-  line-height: 1;
-  text-align:center;
+    font-size: 80px;
+    font-weight: normal;
+    margin: 0;
+    font-family: 'Chelsea Market', Georgia, serif;
+    color: #000;
+    line-height: 1;
+    text-align:center;
 }
 
 h2 {
-font-size: 70px;
-font-weight: normal;
-margin: 0;
-color: #FFB000;
-font-family: 'Chelsea Market', Georgia, serif;
-text-transform: lowercase;
-text-align:center;
+    font-size: 72px;
+    font-weight: normal;
+    margin: 0;
+    color: #FFB000;
+    font-family: 'Chelsea Market', Georgia, serif;
+    text-transform: lowercase;
+    text-align:center;
 }
 
 h3 {
-    font-size: 40px;
-    font-weight: normal;
+    font-size: 45px;
+    font-weight: normal;    
     margin: 0;
-    margin-top: 40px;
-    text-transform: lowercase;
+    margin-top: 30px;
 }
 
 h4 {
@@ -51,7 +50,7 @@ p {
 }
 
 a, a:visited {
-color: #000;
+    color: #000;
     font-size: 12px;
     text-decoration: none;
 }
@@ -94,7 +93,7 @@ code {
 
 .block {
     position: relative;
-    margin: 0;
+    margin: auto 0;
     width: 100%;
     padding-top: 80px;
     padding-bottom: 80px;
