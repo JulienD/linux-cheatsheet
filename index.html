@@ -156,15 +156,26 @@
     <p><code>scp foo.txt john@remotehost.example.com</code> Transfert le fichier foo.txt situé dans le répertoire courant vers le home du compte john de la machine remotehost.example.com.</p>   
     <p><code>scp john@remotehost.example.com:foo.txt</code> Récupère le fichier foo.txt situé dans le home du répertoire du compte john pour le copier dans le repertoire courant.</p>
     <p><code>scp john@remotehost.example.com:/backups/*.sql backups/</code> Récupère tous les fichiers .sql situé dans le répertoire backups pour le copier dans le sous-repertoire backups.</p>
-    <p><code>scp -r mails/ john@remotehost.example.com/mails</code> Transfert l'intégralité du répertoire mails vers la machine remotehost.example.com.</p>   
-    
+    <p><code>scp -r mails/ john@remotehost.example.com/mails</code> Transfert l'intégralité du répertoire mails vers la machine remotehost.example.com.</p>
   </div>
 
   <a name="rsync"></a>
   <div class="block block-rsync">
     <h2>rsync</h2>
-    <p>
-    </p>
+    <h4>Grâce à la commande <strong>rsync</strong> vous pouvez copier des fichiers et dossiers un depuis ou vers un hôte à distance. Grâce à cela vous pouvez faire de la synchronisation de fichiers.</h4>
+    <dl>
+      <dt>Quelques options :</dt>
+      <dd>-a: copie de manière récursive tout en préservant les permissions et les dates des fichiers.</dd>
+      <dd>-z: compresse les données avant le transfert.</dd>
+      <dd>-v: affiche tout ce qui se passe pendant le transfert.</dd>
+      <dd>-e:</dd>
+      <dd>--delete: efface les fichiers qui n'existent pas chez l'émetteur</dd>
+      <dd>--exclude=MOTIF: exclut les fichiers correspondant au motif</dd> 
+    </dl>
+    <p><code>rsync sources/files destination/files</code> Synchroniser les fichiers sources vers une destination.</p>
+    <p><code>rsync -azv john@remotehost.example.com:files/ destination/files</code> Synchroniser les fichiers sources vers une destination.</p>
+    <p><code>rsync -azv --delete sources/files destination/files</code> Synchroniser tout les fichiers, supprime aussi les fichiers qui n'existent plus sur la sources.</p>
+    <p><code>rsync -azv --exclude="dump/*.sql.gz" files/ backup/</code> Synchroniser tout sauf les fichiers .sql.gz.</p>
   </div>
 
   <a name="sed"></a>
@@ -186,7 +197,7 @@
     <h2>find</h2>
     <h4>La commande <strong>find</strong> permet de chercher des fichiers et éventuellement d'exécuter des commandes sur ceux-ci.</h4>
     <dl>
-      <dt>Options :</dt>
+      <dt>Quelques options :</dt>
       <dd>-name : Recherche d'un fichier par son nom</dd>
       <dd>-iname : Même chose que -name mais insensible à la casse</dd>
       <dd>-type : Recherche de fichier d'un certain type</dd>
@@ -224,7 +235,7 @@
     <h2>Archives</h2>
     <h4>Que ce soit pour compresser ou décompresser des fichiers ou des dossiers, cela se fait avec la commande <strong>tar</strong>.</h4>
     <dl>
-      <dt>Options :</dt>
+      <dt>Quelques options :</dt>
       <dd>-c: créer</dd>
       <dd>-t: tester / lister</dd>
       <dd>-x: extraire</dd>
