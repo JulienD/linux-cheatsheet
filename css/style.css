@@ -104,6 +104,12 @@ code {
 .block-title h2 { color: #000; }
 .block-title .meta { font-size: 16px; color: #999; }
 .block-title .meta a { font-size: 16px; color: #333; }
+.block-title .navlist li {
+    display: inline;
+    list-style-type: none;
+    padding-right: 20px;
+    font-size: 30px;
+}
 
 .block-setup { background-color: #348fd4; }
 .block-setup h2 { color: #06406c; }
