@@ -41,12 +41,9 @@ jQuery.fn.topLink = function(settings) {
       var destination = $(elementClick).offset().top;
       console.log(destination);
 
-      $('html,body').animate({scrollTop: $(elementClick).offset().top},'slow');
-
-
-      $('html, body').animate({ scrollTop: destination});//, function() {
-        //window.location.hash = elementClick;
-      //});
+      $('html, body').animate({ scrollTop: destination}, function() {
+        window.location.hash = elementClick;
+      });
       return false;
     });
 
