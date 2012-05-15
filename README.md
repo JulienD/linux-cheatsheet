@@ -1,1 +1,1 @@
-http://juliend.github.com/Linux-cheatsheet/
+http://juliend.github.com/linux-cheatsheet/
