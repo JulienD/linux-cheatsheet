@@ -74,31 +74,24 @@ code {
     font-family: menlo, monospace;
 }
 
-
-#top-link {
-    -moz-border-bottom-colors: none;
-    -moz-border-image: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    background: url("../img/top-arrow.png") no-repeat scroll 5px center #EBEBEB;
-    border-color: rgba(54, 54, 54, 0.5) rgba(54, 54, 54, 0.5) -moz-use-text-color;
-    border-radius: 10px 10px 0 0;
-    border-style: solid solid none;
-    border-width: 4px 4px medium;
+#toTheTop {
+    background-image: url("http://img1.lesnumeriques.com/images/tothetop.png");
     bottom: 0;
-    color: #333333;
     cursor: pointer;
     display: none;
-    font-size: 14px;
-    font-weight: bold;
-    margin: 7px 7px 0;
-    padding: 10px 10px 10px 20px;
+    height: 46px;
     position: fixed;
-    right: 5px;
-    text-decoration: none;
-    text-shadow: 1px 1px 0 #FFFFFF;
-    z-index: 10;
+    right: 10px;
+    width: 150px;
+    z-index: 1000;
+}
+#toTheTop span {
+    color: #FFFFFF;
+    display: block;
+    font-size: 14px;
+    left: 46px;
+    position: absolute;
+    top: 22px;
 }
 
 /*  BLOCKS */
