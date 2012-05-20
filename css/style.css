@@ -27,7 +27,7 @@ h2 {
 
 h3 {
     font-size: 45px;
-    font-weight: normal;    
+    font-weight: normal;
     margin: 0;
     margin-top: 30px;
 }
@@ -75,7 +75,7 @@ code {
 }
 
 #toTheTop {
-    background-image: url("http://img1.lesnumeriques.com/images/tothetop.png");
+    background-image: url("../img/top-page.png");
     bottom: 0;
     cursor: pointer;
     display: none;
@@ -102,7 +102,8 @@ code {
     width: 100%;
     padding-top: 80px;
     padding-bottom: 80px;
-    background-color: #fff; color: #000; 
+    background-color: #fff;
+    color: #000;
 }
 
 .block-title { padding: 20px 0 50px; text-align: center; }
