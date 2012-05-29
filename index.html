@@ -41,6 +41,8 @@
       <li><a href="#packages">Paquets</a></li>
       <li><a href="#process">Processus</a></li>
       <li><a href="#archives">Archives</a></li>
+      <!--<li><a href="#diskspace">Espace disque</a></li>-->
+
     </ul>
     <ul class="navlist">
       <li><a href="#ssh">ssh</a></li>
@@ -64,7 +66,7 @@
     <span>Top of page</span>
   </div>
 
-  <div id="ls" class="block block-ls">
+  <div id="ls" class="block block-ls brown">
     <a name="ls"></a>
     <h2>ls</h2>
     <h4>La commande <strong><i>ls</i></strong> permet d'afficher le contenu d'un répertoire.</h4>
@@ -78,7 +80,7 @@
     <p><code>ls -lhS</code> Afficher les informations des fichiers, avec des tailles lisibles le tout ordonné du plus grand au plus petit.</p>
   </div>
 
-  <div id="cd" class="block block-cd">
+  <div id="cd" class="block block-cd cream">
     <a name="cd"></a>
     <h2>cd</h2>
     <h4>La navigation d’un répertoire à un autre s’effectue avec la commande <strong><i>cd</i></strong> succédée du nom du répertoire.</h4>
@@ -98,7 +100,7 @@
     <p><code>cp -r foo/ baz/</code>Copier des répertoires entiers.</p>
   </div>
 
-  <div id="mv" class="block block-mv">
+  <div id="mv" class="block block-mv blue">
     <a name="mv"></a>
     <h2>mv</h2>
     <h4>Déplacer un fichier est aussi simple que de le copier, pour cela il faut utiliser la commande <strong><i>mv</i></strong>. Cette commande permet aussi de renommer vos fichiers.</h4>
@@ -106,7 +108,7 @@
     <p><code>mv foo_bar.txt foo_baz.txt</code> Renommer le fichier foo_bar.txt en foo_baz.txt.</p>
   </div>
 
-  <div id="rm" class="block block-rm">
+  <div id="rm" class="block block-rm dark-blue">
     <a name="rm"></a>
     <h2>rm</h2>
     <h4>Pour effacer un fichier ou un répertoire on utilise la commande <strong><i>rm</i></strong>.</h4>
@@ -115,7 +117,7 @@
     <p><code>rm -rf baz/</code> Supprimer tous les fichiers contenus dans le répertoire baz.</p>
   </div>
 
-  <div id="mkdir" class="block block-mkdir">
+  <div id="mkdir" class="block block-mkdir white">
     <a name="mkdir"></a>
     <h2>mkdir</h2>
     <h4>Pour créer un répertoire il suffit d’utiliser la commande <strong><i>mkdir</i></strong>. Celle-ci vous permettra de créer un répertoire à l’emplacement où vous êtes ou l’emplacement précisé en argument de la commande.</h4>
@@ -126,14 +128,14 @@
     <p><code>mkdir -p foo/bar/baz</code> Créer l’arborescence foo/bar/baz.</p>
   </div>
 
-  <div id="chown" class="block block-Chown">
+  <div id="chown" class="block block-Chown dark-green">
     <a name="chown"></a>
     <h2>chown</h2>
     <h4>La commande <strong><i>chown</i></strong> permet de changer le propriétaire d'un fichier ou d'un répertoire.</h4>
     <p><code>chown bob:admin foo.txt</code> Attribuer l’utilisateur bob et le groupe admin au fichier foo.txt.</p>
   </div>
 
-  <div id="chmod" class="block block-chmod">
+  <div id="chmod" class="block block-chmod green">
   <a name="chmod"></a>
     <h2>chmod</h2>
     <h4>La commande <strong><i>chown</i></strong> permet de changer le propriétaire d'un fichier ou répertoire. Pour exécuter cette commande vous devez être le propriétaire du fichier ou être logué en root.</h4>
@@ -158,7 +160,7 @@
     </tbody></table>
   </div>
 
-  <div id="packages" class="block block-packages">
+  <div id="packages" class="block block-packages light-green">
     <a name="packages"></a>
     <h2>Packages</h2>
     <h4>L'installation et la désinstallation de paquets peut se faire grâce à la commande <strong><i>apt</i></strong>.</h4>
@@ -171,7 +173,7 @@
     <p><code>dpkg -l | grep php</code> Lister tous les paquets php installés sur la machine</p>
   </div>
 
-  <div id="ssh" class="block block-ssh">
+  <div id="ssh" class="block block-ssh yellow">
     <a name="ssh"></a>
     <h2>ssh</h2>
     <h4>La commande <strong><i>ssh</i></strong> permet de se connecter de façon sécurisée à une machine distante.</h4>
@@ -181,7 +183,7 @@
     <p><code>ssh-copy-id -i ~/.ssh/id_dsa.pub john@remotehost.example.com</code> Copie de la clé publique sur la machine distante.</p>
   </div>
 
-  <div id="scp" class="block block-scp">
+  <div id="scp" class="block block-scp red">
     <a name="scp"></a>
     <h2>scp</h2>
     <h4>La commande <strong><i>scp</i></strong> permet de copier des fichiers entre le serveur et le client ssh de manière sécurisée.</h4>
@@ -191,7 +193,7 @@
     <p><code>scp -r mails/ john@remotehost.example.com:/mails</code> Transfert l'intégralité du répertoire mails vers la machine remotehost.example.com.</p>
   </div>
 
-  <div id="rsync" class="block block-rsync">
+  <div id="rsync" class="block block-rsync brown">
     <a name="rsync"></a>
     <h2>rsync</h2>
     <h4>Grâce à la commande <strong><i>rsync</i></strong> vous pouvez copier des fichiers et des dossiers depuis ou vers un hôte à distance. Grâce à cela vous pouvez faire de la synchronisation de fichiers.</h4>
@@ -200,20 +202,20 @@
       <dd><i>-a</i>: copie de manière récursive tout en préservant les permissions et les dates des fichiers.</dd>
       <dd><i>-z</i>: compresse les données avant le transfert.</dd>
       <dd><i>-v</i>: affiche tout ce qui se passe pendant le transfert.</dd>
-      <dd><i>-e</i>:</dd>
+      <dd><i>-e</i>: TODO</dd>
       <dd><i>--delete</i>: efface les fichiers qui n'existent pas chez l'émetteur</dd>
       <dd><i>--exclude=MOTIF</i>: exclut les fichiers correspondant au motif</dd>
     </dl>
     <p><code>rsync sources/files destination/files</code> Synchroniser les fichiers sources vers une destination.</p>
-    <p><code>rsync -azv john@remotehost.example.com:files/ destination/files</code> Synchroniser les fichiers sources vers une destination.</p>
+    <p><code>rsync -azv john@remotehost.example.com:files/ destination/files</code> TODO.</p>
     <p><code>rsync -azv --delete sources/files destination/files</code> Synchroniser tous les fichiers, supprime aussi les fichiers qui n'existent plus sur la source.</p>
     <p><code>rsync -azv --exclude="dump/*.sql.gz" files/ backup/</code> Synchroniser tout le répertoire files sauf les fichiers .sql.gz.</p>
   </div>
 
-  <div id="sed" class="block block-sed">
+  <div id="sed" class="block block-sed cream">
     <a name="sed"></a>
     <h2>sed</h2>
-    <h4>La commande <strong><i>sed</i></strong> est un utilitaire qui parcourt un fichier texte ligne par ligne afin de leur appliquer un traitement ou un remplacement lorsque l'expression régulière est vérifiée.</h4>
+    <h4>La commande <strong><i>sed</i></strong> est un utilitaire qui parcourt un fichier texte ligne par ligne afin de lui appliquer un traitement ou un remplacement lorsque l'expression régulière est vérifiée.</h4>
     <p><code>sed 's/foo/bar/' file.txt</code> Transformer la première occurence 'foo' de chaque ligne par 'bar'.</p>
     <p><code>sed 's/\t/  /g' file.txt</code> Transformer toutes les tabulations par deux espaces.</p>
     <p><code>sed '/^#/ d' file.txt</code> Supprimer toutes les lignes commancant par #.</p>
@@ -221,7 +223,7 @@
     <p><code>sed -n '/foo/p' file.txt</code> Afficher uniquement les lignes où l'expression est trouvée.</p>
   </div>
 
-  <div id="grep" class="block block-grep">
+  <div id="grep" class="block block-grep blue">
     <a name="grep"></a>
     <h2>grep</h2>
     <h4>La commande <strong><i>grep</i></strong> permet de rechercher une chaîne de caractères ou un motif dans un fichier.</h4>
@@ -236,7 +238,7 @@
     <p><code>grep 'text' foo.txt</code> Recherche l'occurence text dans le fichier foo.txt</p>
   </div>
 
-  <div id="find" class="block block-find">
+  <div id="find" class="block block-find dark-blue">
     <a name="find"></a>
     <h2>find</h2>
     <h4>La commande <strong><i>find</i></strong> permet de chercher des fichiers et éventuellement d'exécuter des commandes dessus.</h4>
@@ -255,21 +257,13 @@
       <dd><i>-o</i>: Opérateur OU</dd>
       <dd><i>!</i> ou <i>-not</i>: Opérateur NOT</dd>
     </dl>
-    <p><code>find myfile* -print</code><br />Rechercher un fichier commençant par "myfile"</p>
-    <p><code>find -name *myfile*.txt -print</code><br /> Rechercher un fichier contenant "myfile" et ayant pour extention ".txt"</p>
-    <p><code>find /usr -type d -print</code><br /> Afficher tous les répertoires de /usr</p>
-    <p><code>find $HOME \( -name '*.txt' -o -name '*.pdf' \)</code><br />Afficher tous les fichiers .txt ou .pdf dans le répertoire home de l'utilisateur.</p>
-    <p><code>find $HOME -name *.txt -atime +7 -exec rm {} \;</code><br />Supprimer tous les fichiers .txt qui n'ont pas été accédés depuis plus de 7 jours dans le répertoire home de l'utilisateur.</p>
-    <p><code>find $HOME -name '*.txt' -size +4k -exec ls -l {} \;</code><br />Affiche la taille de tous les fichiers de plus de 2 kilos</p>
+    <p><code>find myfile* -print</code> Rechercher un fichier commençant par "myfile"</p>
+    <p><code>find -name *myfile*.txt -print</code> Rechercher un fichier contenant "myfile" et ayant pour extention ".txt"</p>
+    <p><code>find /usr -type d -print</code> Afficher tous les répertoires de /usr</p>
+    <p><code>find $HOME \( -name '*.txt' -o -name '*.pdf' \)</code> Afficher tous les fichiers .txt ou .pdf dans le répertoire home de l'utilisateur.</p>
+    <p><code>find $HOME -name *.txt -atime +7 -exec rm {} \;</code> Supprimer tous les fichiers .txt qui n'ont pas été consultés depuis plus de 7 jours dans le répertoire home de l'utilisateur.</p>
+    <p><code>find $HOME -name '*.txt' -size +4k -exec ls -l {} \;</code> Afficher la taille de tous les fichiers de plus de 2 kilos</p>
   </div>
-
-  <!--
-  TODO
-  <div id="du" class="block block-du">
-    <a name="du"></a>
-    <h2>du</h2>
-  </div>
-  -->
 
   <div id="archives" class="block block-archives">
     <a name="archives"></a>
@@ -304,6 +298,56 @@
     <p><code>kill pid</code> Arrêter un processus.</p>
     <p><code>kill ­9 pid</code> Tuer le processus.</p>
   </div>
+
+<!--
+  <div id="diskspace" class="block block-diskspace">
+    <a name="diskspace"></a>
+    <h2>Espace disque</h2>
+    <h4>La commande <strong><i>du</i></strong> est utile pour connaitre la répartition de l'espace d'un disque dur.</h4>
+    <p><code>top</code> Classement en live des processus en cours triés par utilisation Proc, Mem ou Temps CPU.</p>
+  </div>
+
+  <div id="sort" class="block block-sort">
+    <a name="sort"></a>
+    <h2>sort</h2>
+  </div>
+
+  <div id="awk" class="block block-awk">
+    <a name="awk"></a>
+    <h2>awk</h2>
+    <h4>Plus qu'une commande, <strong>awk</strong> est un programme complexe combinant les fonctions sed et grep.</h4>
+  </div>
+
+  <div id="pipe" class="block block-pipe">
+    <a name="pipe"></a>
+    <h2>Pipes and Redirection</h2>
+    You pipe a command to another command, and redirect it to a file.)
+  {command} > {file}  Redirect output to a file, eg ls > list.txt writes directory to file.
+  {command} >> {file} Append output to an existing file, eg cat update >> archive adds update to end of archive.
+  {command} < {file}  Get input from a file, eg sort < file.txt
+  {command} < {file1} > {file2} Get input from file1, and write to file2, eg sort < old.txt > new.txt sorts old.txt and saves as new.txt.
+  {command} | {command} Pipe one command to another, eg ls | more gets directory and sends it to more to show it one page at a time.
+  </div>
+
+  <div id="test" class="block block-test">
+    <a name="test"></a>
+    <h2>test</h2>
+    <h4>La commande <strong>test</strong> permet comparer des chaines de caractères, des nombres et vérifier certaines propriétés de fichiers. Il est possible de simplifier sont écriture en la remplaçant par des crochets [ ].</h4>
+    <p><code>test -e foo.txt</code> tester si le fichier foo.txt existe.</p>
+    <p><code>test -d foo</code> tester si  existe et qu'il soit un répertoire.</p>
+    <p><code>test -f foo.txt</code> .</p>
+    <p><code>test -w foo.txt</code> tester si le fichier est accessible en écriture.</p>
+    <p><code>test -x foo.txt</code> tester si le fichier est exécutable.</p>
+    <p><code>[ string1 != string ]</code> vérifier que la chaine strign1 n'est pas égale à string2.</p>
+    <p><code>[ int1 != int2 ]</code> vérifier que le nombre int1 est inférieur à int2.</p>
+  </div>
+
+  <div id="various-command" class="block block-various-command">
+    <a name="various-command"></a>
+    <h2>Commandes en vrac</h2>
+    <h4>Quelques exemples de combinaisons de commandes ou de commandes complexes.</h4>
+  </div>
+-->
 
 </body>
 </html>
