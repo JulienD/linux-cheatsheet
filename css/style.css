@@ -189,3 +189,46 @@ code {
 /* Green */
 .block-link { background-color: #789048; color: #31440b; }
 .block-link code { background-color: #fff; color: #000;}
+
+
+/* background block colors */
+/* Brown */
+.brown { background-color: #5E412F; color: #FCEBB6; }
+.brown code { background-color: #fff; color: #000; }
+
+/* Cream */
+.cream { background-color: #FCEBB6; color: #5E412F; }
+.cream code { background-color: #000; color: #fff; }
+
+/* Blue */
+.blue { background-color: #65b7f4; color: #06406C; }
+.blue code { background-color: #000; color: #fff;}
+
+/* Dark blue */
+.dark-blue { background-color: #06406C; color: #65b7f4; }
+.dark-blue code { background-color: #000; color: #fff;}
+
+/* White */
+.white { background-color: #F0F0D8; color: #000; }
+.white code { background-color: #000; color: #fff;}
+
+/* Dark green */
+.dark-green { background-color: #607848; color: #d1e875; }
+.block-mkdir code { background-color: #fff; color: #000;}
+
+/* Green */
+.green { background-color: #789048; color: #31440b; }
+.green code { background-color: #fff; color: #000;}
+
+/* light green */
+.light-green { background-color: #C0D860; color: #29310b; }
+.light-green code { background-color: #000; color: #fff;}
+
+/* Yellow */
+.yellow { background-color: #ddd285; color: #6e5918; }
+.yellow code { background-color: #000; color: #fff;}
+
+/* Red */
+.red { background-color: #6c0606; color: #D3B2AF; }
+.red code { background-color: #fff; color: #000;}
+
