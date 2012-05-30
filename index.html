@@ -300,6 +300,17 @@
   </div>
 
 <!--
+  <div id="file" class="block block-file">
+    <a name="file"></a>
+    <h2>Afficher un fichier</h2>
+    <h4>Pour lire un fichier plusieurs commandes s'offrent à vous <strong>vi</strong>, <strong>cat</strong>, <strong>head</strong> ou encore <strong>tail</strong>.</h4>
+    <p><code>cat foo.txt</code> retourne tout le fichier sur la sortie standard.</p>
+    <p><code>head foo.txt</code> retourne le début du fichier.</p>
+    <p><code>tail foo.txt</code> retourne les dernières lignes du fichier.</p>
+    <p><code>tail -n 15 foo.txt</code> .</p>
+    <p><code>tail -f mon-fichier.txt</code> Affiche la fin du fichier en l'actualisant à chaque fois que de nouvelles lignes y sont ajoutées. Utile pour suivre un fichier de logs.</p>
+  </div>
+
   <div id="diskspace" class="block block-diskspace">
     <a name="diskspace"></a>
     <h2>Espace disque</h2>
@@ -346,6 +357,7 @@
     <a name="various-command"></a>
     <h2>Commandes en vrac</h2>
     <h4>Quelques exemples de combinaisons de commandes ou de commandes complexes.</h4>
+    <code>:w !sudo tee% > /dev/null</code>
   </div>
 -->
 
