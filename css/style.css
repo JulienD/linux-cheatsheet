@@ -118,78 +118,11 @@ code {
 .block-title .meta { font-size: 16px; color: #999; }
 .block-title .meta a { font-size: 16px; color: #333; }
 
-/* Brown */
-.block-ls { background-color: #5E412F; color: #FCEBB6; }
-.block-ls code { background-color: #fff; color: #000; }
-
-/* Cream */
-.block-cd { background-color: #FCEBB6; color: #5E412F; }
-.block-cd code { background-color: #000; color: #fff; }
-
-/* Blue */
-.block-cp { background-color: #65b7f4; color: #06406C; }
-.block-cp code { background-color: #000; color: #fff;}
-
-/* Dark blue */
-.block-mv { background-color: #06406C; color: #65b7f4; }
-.block-mv code { background-color: #000; color: #fff;}
-
-/* White */
-.block-rm { background-color: #F0F0D8; color: #000; }
-.block-rm code { background-color: #000; color: #fff;}
-
-/* Dark green */
-.block-mkdir { background-color: #607848; color: #d1e875; }
-.block-mkdir code { background-color: #fff; color: #000;}
-
-/* Green */
-.block-chmod { background-color: #789048; color: #31440b; }
-.block-chmod code { background-color: #fff; color: #000;}
-
-/* light green */
-.block-chown { background-color: #C0D860; color: #29310b; }
-.block-chown code { background-color: #000; color: #fff;}
-
-/* Yellow */
-.block-packages { background-color: #ddd285; color: #6e5918; }
-.block-packages code { background-color: #000; color: #fff;}
-
-/* Red */
-.block-ssh { background-color: #6c0606; color: #D3B2AF; }
-.block-ssh code { background-color: #fff; color: #000;}
-
-/* Brown */
-.block-scp { background-color: #5E412F; color: #FCEBB6; }
-.block-scp code { background-color: #fff; color: #000; }
-
-/* Cream */
-.block-rsync { background-color: #FCEBB6; color: #5E412F; }
-.block-rsync code { background-color: #000; color: #fff; }
-
-/* Blue */
-.block-sed { background-color: #65b7f4; color: #06406C; }
-.block-sed code { background-color: #000; color: #fff;}
-
-/* Dark blue */
-.block-grep { background-color: #06406C; color: #65b7f4; }
-.block-grep code { background-color: #000; color: #fff;}
-
-/* White */
-.block-find { background-color: #F0F0D8; color: #000; }
-.block-find code { background-color: #000; color: #fff;}
-
-/* Dark green */
-.block-archives { background-color: #607848; color: #d1e875; }
-.block-archives code { background-color: #fff; color: #000;}
-
-/* Green */
-.block-process { background-color: #789048; color: #31440b; }
-.block-process code { background-color: #fff; color: #000;}
-
-/* Green */
-.block-link { background-color: #789048; color: #31440b; }
-.block-link code { background-color: #fff; color: #000;}
-
+.block-comment #disqus_thread {
+    width: 960px;
+    margin: 30px auto;
+    line-height: 200%;
+}
 
 /* background block colors */
 /* Brown */
