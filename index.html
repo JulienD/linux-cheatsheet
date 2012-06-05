@@ -50,7 +50,7 @@
       <li><a href="#packages">Paquets</a></li>
       <li><a href="#process">Processus</a></li>
       <li><a href="#archives">Archives</a></li>
-      <!--<li><a href="#diskspace">Espace disque</a></li>-->
+      <li><a href="#diskspace">Espace disque</a></li>
     </ul>
 
     <a href="https://twitter.com/share" class="twitter-share-button" data-text="Linux - Cheatsheet des commandes fondamentales" data-via="juliendubreuil" data-size="large" data-related="juliendubreuil">Tweet</a>
@@ -301,7 +301,15 @@
     <p><code>tar -tf mon_fichier.tar</code> Liste tous les fichiers contenus dans une archive.</p>
   </div>
 
-  <div id="process" class="block block-process light-green">
+  <div id="diskspace" class="block block-diskspace light-green">
+    <a name="diskspace"></a>
+    <h2>Espace disque</h2>
+    <p><code>du -sh dossier1 dossier2</code> connaitre l'espace disque utilisé des deux répertoires.(<em>disk usage</em>).</p>
+    <p><code>du -hc --max-depth=1</code> afficher l'espace disque utilisé des fichiers et répertoires contenu dans un répertoire.</p>
+    <p><code>df -h</code> afficher l'espace disque disponible (<em>disk free</em>).</p>
+  </div>
+
+  <div id="process" class="block block-process yellow">
     <a name="process"></a>
     <h2>Gestion des processus</h2>
     <p><code>top</code> Classement en live des processus en cours triés par utilisation Proc, Mem ou Temps CPU.</p>
@@ -324,13 +332,6 @@
     <p><code>tail -f mon-fichier.txt</code> Affiche la fin du fichier en l'actualisant à chaque fois que de nouvelles lignes y sont ajoutées. Utile pour suivre un fichier de logs.</p>
   </div>
 
-  <div id="diskspace" class="block block-diskspace">
-    <a name="diskspace"></a>
-    <h2>Espace disque</h2>
-    <p><code>du -sh dossier1 dossier2</code> utile pour connaitre l'occupation de l'espace disque (<em>disk usage</em>).</p>
-    <p><code>df -h</code> utile pour connaitre l'espace disque disponible (<em>disk free</em>).</p>
-    <p><code>top</code> Classement en live des processus en cours triés par utilisation Proc, Mem ou Temps CPU.</p>
-  </div>
 
   <div id="sort" class="block block-sort">
     <a name="sort"></a>
@@ -358,7 +359,7 @@
     <a name="various-command"></a>
     <h2>Commandes en vrac</h2>
     <h4>Quelques exemples de combinaisons de commandes ou de commandes complexes.</h4>
-    <code>:w !sudo tee% > /dev/null</code>
+    <p><code>:w !sudo tee% > /dev/null</code></p>
   </div>
 -->
 
