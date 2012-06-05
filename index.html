@@ -38,19 +38,19 @@
       <li><a href="#chown">chown</a></li>
     </ul>
     <ul class="navlist">
-      <li><a href="#packages">Paquets</a></li>
-      <li><a href="#process">Processus</a></li>
-      <li><a href="#archives">Archives</a></li>
-      <!--<li><a href="#diskspace">Espace disque</a></li>-->
-
-    </ul>
-    <ul class="navlist">
       <li><a href="#ssh">ssh</a></li>
       <li><a href="#scp">scp</a></li>
       <li><a href="#rsync">rsync</a></li>
       <li><a href="#sed">sed</a></li>
       <li><a href="#grep">grep</a></li>
       <li><a href="#find">find</a></li>
+      <li><a href="#test">test</a></li>
+    </ul>
+    <ul class="navlist">
+      <li><a href="#packages">Paquets</a></li>
+      <li><a href="#process">Processus</a></li>
+      <li><a href="#archives">Archives</a></li>
+      <!--<li><a href="#diskspace">Espace disque</a></li>-->
     </ul>
 
     <a href="https://twitter.com/share" class="twitter-share-button" data-text="Linux - Cheatsheet des commandes fondamentales" data-via="juliendubreuil" data-size="large" data-related="juliendubreuil">Tweet</a>
@@ -92,7 +92,7 @@
     <p><code>pwd</code> Renvoyer le chemin absolu du répertoire courant ce qui est utile puisqu’en général le shell n’affiche que le nom du répertoire courant.</p>
   </div>
 
-  <div id="cp" class="block block-cp">
+  <div id="cp" class="block block-cp blue">
     <a name="cp"></a>
     <h2>cp</h2>
     <h4>Pour créer une copie d’un fichier, on utilise la commande <strong><i>cp</i></strong>.</h4>
@@ -100,7 +100,7 @@
     <p><code>cp -r foo/ baz/</code> Copier des répertoires entiers (note : si baz existe, la cible sera baz/foo/).</p>
   </div>
 
-  <div id="mv" class="block block-mv blue">
+  <div id="mv" class="block block-mv dark-blue">
     <a name="mv"></a>
     <h2>mv</h2>
     <h4>Déplacer un fichier est aussi simple que de le copier, pour cela il faut utiliser la commande <strong><i>mv</i></strong>. Cette commande permet aussi de renommer vos fichiers.</h4>
@@ -108,7 +108,7 @@
     <p><code>mv foo_bar.txt foo_baz.txt</code> Renommer le fichier foo_bar.txt en foo_baz.txt.</p>
   </div>
 
-  <div id="rm" class="block block-rm dark-blue">
+  <div id="rm" class="block block-rm white">
     <a name="rm"></a>
     <h2>rm</h2>
     <h4>Pour effacer un fichier ou un répertoire on utilise la commande <strong><i>rm</i></strong>.</h4>
@@ -117,7 +117,7 @@
     <p><code>rm -rf baz/</code> Supprimer le répertoire baz et tout son contenu.</p>
   </div>
 
-  <div id="mkdir" class="block block-mkdir white">
+  <div id="mkdir" class="block block-mkdir dark-green">
     <a name="mkdir"></a>
     <h2>mkdir</h2>
     <h4>Pour créer un répertoire il suffit d’utiliser la commande <strong><i>mkdir</i></strong>. Celle-ci vous permettra de créer un répertoire à l’emplacement où vous êtes ou l’emplacement précisé en argument de la commande.</h4>
@@ -128,14 +128,14 @@
     <p><code>mkdir -p foo/bar/baz</code> Créer l’arborescence foo/bar/baz.</p>
   </div>
 
-  <div id="chown" class="block block-Chown dark-green">
+  <div id="chown" class="block block-Chown green">
     <a name="chown"></a>
     <h2>chown</h2>
     <h4>La commande <strong><i>chown</i></strong> permet de changer le propriétaire d'un fichier ou d'un répertoire.</h4>
     <p><code>chown bob:admin foo.txt</code> Attribuer l’utilisateur bob et le groupe admin au fichier foo.txt.</p>
   </div>
 
-  <div id="chmod" class="block block-chmod green">
+  <div id="chmod" class="block block-chmod light-green">
   <a name="chmod"></a>
     <h2>chmod</h2>
     <h4>La commande <strong><i>chown</i></strong> permet de changer le propriétaire d'un fichier ou répertoire. Pour exécuter cette commande vous devez être le propriétaire du fichier ou être logué en root.</h4>
@@ -158,19 +158,6 @@
       <tr><td>lecture et écriture</td><td align="center">rw-</td><td align="center">6</td></tr>
       <tr><td>tous les droits (lecture, écriture et exécution)</td><td align="center">rwx</td><td align="center">7</td></tr>
     </tbody></table>
-  </div>
-
-  <div id="packages" class="block block-packages light-green">
-    <a name="packages"></a>
-    <h2>Packages</h2>
-    <h4>L'installation et la désinstallation de paquets sous Debian, Ubuntu et distribution dérivées peut se faire grâce à la commande <strong><i>apt</i></strong>.</h4>
-    <p><code>apt-get update</code> Mettre à jour la liste des fichiers disponibles dans les dépôts APT.</p>
-    <p><code>apt-get install samba</code> Installer du paquet Samba.</p>
-    <p><code>apt-get install foo=2.2-1</code> Installer du paquet foo dans sa version 2.2-1.</p>
-    <p><code>apt-get remove samba</code> Désinstallation du paquet Samba tout en laissant les fichiers de configuration.</p>
-    <p><code>apt-get purge samba</code> Suppression complète du paquet Samba et de ses fichiers de configuration.</p>
-    <p><code>apt-cache policy php5</code> Récupération d'informations sur l'état du paquet php5</p>
-    <p><code>dpkg -l | grep php</code> Lister tous les paquets php installés sur la machine</p>
   </div>
 
   <div id="ssh" class="block block-ssh yellow">
@@ -266,7 +253,32 @@
     <p><code>find $HOME -name '*.txt' -size +4k -exec ls -l {} \;</code> Afficher la taille de tous les fichiers de plus de 4 kilos</p>
   </div>
 
-  <div id="archives" class="block block-archives white">
+  <div id="test" class="block block-test white">
+    <a name="test"></a>
+    <h2>test</h2>
+    <h4>La commande <strong>test</strong> permet comparer des chaines de caractères, des nombres et vérifier certaines propriétés de fichiers. Il est possible de simplifier son écriture en la remplaçant par des crochets [ ].</h4>
+    <p><code>test -e foo.txt</code> tester si le fichier foo.txt existe.</p>
+    <p><code>test -d foo</code> tester que foo soit un répertoire.</p>
+    <p><code>test -w foo.txt</code> tester si le fichier est accessible en écriture.</p>
+    <p><code>test -x foo.txt</code> tester si le fichier est exécutable.</p>
+    <p><code>[ "string1" != "string2" ]</code> vérifier que la chaine string1 n'est pas égale à string2.</p>
+    <p><code>[ int1 != int2 ]</code> vérifier que le nombre int1 est inférieur à int2.</p>
+  </div>
+
+  <div id="packages" class="block block-packages dark-green">
+    <a name="packages"></a>
+    <h2>Packages</h2>
+    <h4>L'installation et la désinstallation de paquets sous Debian, Ubuntu et distribution dérivées peut se faire grâce à la commande <strong><i>apt</i></strong>.</h4>
+    <p><code>apt-get update</code> Mettre à jour la liste des fichiers disponibles dans les dépôts APT.</p>
+    <p><code>apt-get install samba</code> Installer du paquet Samba.</p>
+    <p><code>apt-get install foo=2.2-1</code> Installer du paquet foo dans sa version 2.2-1.</p>
+    <p><code>apt-get remove samba</code> Désinstallation du paquet Samba tout en laissant les fichiers de configuration.</p>
+    <p><code>apt-get purge samba</code> Suppression complète du paquet Samba et de ses fichiers de configuration.</p>
+    <p><code>apt-cache policy php5</code> Récupération d'informations sur l'état du paquet php5</p>
+    <p><code>dpkg -l | grep php</code> Lister tous les paquets php installés sur la machine</p>
+  </div>
+
+  <div id="archives" class="block block-archives green">
     <a name="archives"></a>
     <h2>Archives</h2>
     <h4>Que ce soit pour compresser ou décompresser des fichiers ou des dossiers, cela se fait avec la commande <strong><i>tar</i></strong>.</h4>
@@ -289,7 +301,7 @@
     <p><code>tar -tf mon_fichier.tar</code> Liste tous les fichiers contenus dans une archive.</p>
   </div>
 
-  <div id="process" class="block block-process dark-green">
+  <div id="process" class="block block-process light-green">
     <a name="process"></a>
     <h2>Gestion des processus</h2>
     <p><code>top</code> Classement en live des processus en cours triés par utilisation Proc, Mem ou Temps CPU.</p>
@@ -340,19 +352,6 @@
   {command} < {file}  Get input from a file, eg sort < file.txt
   {command} < {file1} > {file2} Get input from file1, and write to file2, eg sort < old.txt > new.txt sorts old.txt and saves as new.txt.
   {command} | {command} Pipe one command to another, eg ls | more gets directory and sends it to more to show it one page at a time.
-  </div>
-
-  <div id="test" class="block block-test">
-    <a name="test"></a>
-    <h2>test</h2>
-    <h4>La commande <strong>test</strong> permet comparer des chaines de caractères, des nombres et vérifier certaines propriétés de fichiers. Il est possible de simplifier son écriture en la remplaçant par des crochets [ ].</h4>
-    <p><code>test -e foo.txt</code> tester si le fichier foo.txt existe.</p>
-    <p><code>test -d foo</code> tester si  existe et qu'il soit un répertoire.</p>
-    <p><code>test -f foo.txt</code> .</p>
-    <p><code>test -w foo.txt</code> tester si le fichier est accessible en écriture.</p>
-    <p><code>test -x foo.txt</code> tester si le fichier est exécutable.</p>
-    <p><code>[ "string1" != "string2" ]</code> vérifier que la chaine string1 n'est pas égale à string2.</p>
-    <p><code>[ int1 != int2 ]</code> vérifier que le nombre int1 est inférieur à int2.</p>
   </div>
 
   <div id="various-command" class="block block-various-command">
