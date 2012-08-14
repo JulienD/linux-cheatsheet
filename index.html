@@ -177,7 +177,8 @@
     <p><code>scp foo.txt john@remotehost.example.com:</code> Transfère le fichier foo.txt situé dans le répertoire courant vers le home du compte john de la machine remotehost.example.com.</p>
     <p><code>scp john@remotehost.example.com:foo.txt ./</code> Récupère le fichier foo.txt situé dans le home du répertoire du compte john pour le copier dans le répertoire courant.</p>
     <p><code>scp john@remotehost.example.com:/backups/*.sql backups/</code> Récupérer les fichiers .sql situés dans le répertoire backups pour le copier dans le sous-répertoire backups.</p>
-    <p><code>scp -r mails/ john@remotehost.example.com:</code> Transfère l'intégralité du répertoire mails.</p>
+    <p><code>scp -P 17654 john@remotehost:/files/ files/</code> Récupérer les fichiers via un autre port (17654) que le port par défaut (22).</p>
+    <p><code>scp -r mails/ john@remotehost:</code> Transfère l'intégralité du répertoire mails.</p>
   </div>
 
   <div id="rsync" class="block block-rsync brown">
