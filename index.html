@@ -224,7 +224,9 @@
       <dd><i>-x</i>: ligne correspondant exactement à la chaîne.</dd>
       <dd><i>-l</i>: affiche le nom des fichiers qui contiennent la chaîne.</dd>
     </dl>
-    <p><code>grep 'text' foo.txt</code> Recherche l'occurence text dans le fichier foo.txt</p>
+    <p><code>grep 'text' foo.txt</code> Recherche l'occurence 'text' dans le fichier foo.txt.</p>
+    <p><code>grep -nri 'foobar' /project </code> Recherche toutes les occurences de 'foobar' dans le repertoire /project.</p>
+    <p><code>grep -nri '\(foo\|bar\|baz\)' /project </code> Recherche toutes les occurences à 'foo', 'bar' et 'baz' dans le repertoire /project.</p>
   </div>
 
   <div id="find" class="block block-find dark-blue">
