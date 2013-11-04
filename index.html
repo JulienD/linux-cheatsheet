@@ -191,6 +191,7 @@
       <dd><i>-z</i>: compresse les données avant le transfert.</dd>
       <dd><i>-v</i>: affiche tout ce qui se passe pendant le transfert.</dd>
       <dd><i>-n</i>: permet de tester la commande (<em>dry-run</em>).</dd>
+      <dd><i>--progress</i>: affiche la barre de progression pendant le transfert.</dd>
       <dd><i>--delete</i>: efface les fichiers qui n'existent pas chez l'émetteur</dd>
       <dd><i>--exclude=MOTIF</i>: exclut les fichiers correspondant au motif</dd>
     </dl>
@@ -198,6 +199,7 @@
     <p><code>rsync -azv john@remotehost.example.com:source/ destination/</code> Récupère les nouveaux fichiers et fichiers modifiés du répertoire distant vers le répertoire local.</p>
     <p><code>rsync -azv --delete source/ destination/</code> Synchroniser tous les fichiers, supprime aussi les fichiers qui n'existent plus sur la source.</p>
     <p><code>rsync -azv --exclude="dump/*.sql.gz" files/ backup/</code> Synchroniser tout le répertoire files sauf les fichiers .sql.gz.</p>
+    <p><code>rsync --rsh='ssh -p1234' ource/ destination/</code> Effectuer un rsync sur un port spécifique.</p>
     <p>Note : en général, on suffixe toujours par un <code>/</code> le nom des répertoires sources et de destination.</p>
   </div>
 
