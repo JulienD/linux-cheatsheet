@@ -31,6 +31,7 @@
       <li><a href="#cp">cp</a></li>
       <li><a href="#mv">mv</a></li>
       <li><a href="#rm">rm</a></li>
+      <li><a href="#cat">cat</a></li>
     </ul>
     <ul class="navlist">
       <li><a href="#mkdir">mkdir</a></li>
@@ -67,7 +68,7 @@
   </div>
 
   <div id="ls" class="block block-ls brown">
-    <a name="ls"></a>
+    <a id="ls"></a>
     <h2>ls</h2>
     <h4>La commande <strong><i>ls</i></strong> permet d'afficher le contenu d'un répertoire.</h4>
     <p><code>ls -l</code> Afficher les informations de manière détaillée.</p>
@@ -81,7 +82,7 @@
   </div>
 
   <div id="cd" class="block block-cd cream">
-    <a name="cd"></a>
+    <a id="cd"></a>
     <h2>cd</h2>
     <h4>La navigation d’un répertoire à un autre s’effectue avec la commande <strong><i>cd</i></strong> succédée du nom du répertoire.</h4>
     <p><code>cd /</code> Permet de se retrouver à la racine du disque.</p>
@@ -93,7 +94,7 @@
   </div>
 
   <div id="cp" class="block block-cp blue">
-    <a name="cp"></a>
+    <a id="cp"></a>
     <h2>cp</h2>
     <h4>Pour créer une copie d’un fichier, on utilise la commande <strong><i>cp</i></strong>.</h4>
     <p><code>cp foo/bar.txt baz/</code> Copier le fichier bar.txt dans le répertoire baz.<p>
@@ -101,15 +102,23 @@
   </div>
 
   <div id="mv" class="block block-mv dark-blue">
-    <a name="mv"></a>
+    <a id="mv"></a>
     <h2>mv</h2>
     <h4>Déplacer un fichier est aussi simple que de le copier, pour cela il faut utiliser la commande <strong><i>mv</i></strong>. Cette commande permet aussi de renommer vos fichiers.</h4>
     <p><code>mv foo/bar.txt baz/</code> Déplacer le fichier bar.txt dans le répertoire baz.</p>
     <p><code>mv foo_bar.txt foo_baz.txt</code> Renommer le fichier foo_bar.txt en foo_baz.txt.</p>
   </div>
 
+  <div id="cat" class="block block-cat light-green">
+    <a id="cat"></a>
+    <h2>cat</h2>
+    <h4>Pour afficher le contenu d'un fichier dans le terminal, on utilise la commande <strong><i>cat</i></strong>.</h4>
+    <p><code>cat foo.txt</code> Affiche le contenu du fichier foo.txt sur la sortie standard.</p>
+    <p><code>cat -n foo.txt</code> Affiche le contenu du fichier foo.txt sur la sortie standard avec les numéros de ligne.</p>
+  </div>
+
   <div id="rm" class="block block-rm white">
-    <a name="rm"></a>
+    <a id="rm"></a>
     <h2>rm</h2>
     <h4>Pour effacer un fichier ou un répertoire on utilise la commande <strong><i>rm</i></strong>.</h4>
     <p><code>rm *.txt</code> Supprimer tous les fichiers ayant pour extension txt.</p>
@@ -118,7 +127,7 @@
   </div>
 
   <div id="mkdir" class="block block-mkdir dark-green">
-    <a name="mkdir"></a>
+    <a id="mkdir"></a>
     <h2>mkdir</h2>
     <h4>Pour créer un répertoire il suffit d’utiliser la commande <strong><i>mkdir</i></strong>. Celle-ci vous permettra de créer un répertoire à l’emplacement où vous êtes ou l’emplacement précisé en argument de la commande.</h4>
     <p><code>mkdir -v</code> Retourner des informations lors de la création d'un répertoire.</p>
@@ -129,14 +138,14 @@
   </div>
 
   <div id="chown" class="block block-Chown green">
-    <a name="chown"></a>
+    <a id="chown"></a>
     <h2>chown</h2>
     <h4>La commande <strong><i>chown</i></strong> permet de changer le propriétaire d'un fichier ou d'un répertoire.</h4>
     <p><code>chown bob:admin foo.txt</code> Attribuer l’utilisateur bob et le groupe admin au fichier foo.txt.</p>
   </div>
 
   <div id="chmod" class="block block-chmod light-green">
-  <a name="chmod"></a>
+  <a id="chmod"></a>
     <h2>chmod</h2>
     <h4>La commande <strong><i>chmod</i></strong> permet de changer les droits d'un fichier ou d'un répertoire. Pour exécuter cette commande vous devez être le propriétaire du fichier ou être logué en root.</h4>
     <p><code>chmod u+w fichier</code> Ajouter les droits d'écriture au propriétaire (user, write)</p>
@@ -161,7 +170,7 @@
   </div>
 
   <div id="ssh" class="block block-ssh yellow">
-    <a name="ssh"></a>
+    <a id="ssh"></a>
     <h2>ssh</h2>
     <h4>La commande <strong><i>ssh</i></strong> permet de se connecter de façon sécurisée à une machine distante.</h4>
     <p><code>ssh john@remotehost.example.com</code> Connexion à la machine distante avec le login john.</p>
@@ -171,7 +180,7 @@
   </div>
 
   <div id="scp" class="block block-scp red">
-    <a name="scp"></a>
+    <a id="scp"></a>
     <h2>scp</h2>
     <h4>La commande <strong><i>scp</i></strong> permet de copier des fichiers entre le serveur et le client ssh de manière sécurisée.</h4>
     <p><code>scp foo.txt john@remotehost.example.com:</code> Transfère le fichier foo.txt situé dans le répertoire courant vers le home du compte john de la machine remotehost.example.com.</p>
@@ -182,7 +191,7 @@
   </div>
 
   <div id="rsync" class="block block-rsync brown">
-    <a name="rsync"></a>
+    <a id="rsync"></a>
     <h2>rsync</h2>
     <h4>Grâce à la commande <strong><i>rsync</i></strong> vous pouvez copier des fichiers et des dossiers depuis ou vers un hôte à distance. Grâce à cela vous pouvez faire de la synchronisation de fichiers.</h4>
     <dl>
@@ -204,7 +213,7 @@
   </div>
 
   <div id="sed" class="block block-sed cream">
-    <a name="sed"></a>
+    <a id="sed"></a>
     <h2>sed</h2>
     <h4>La commande <strong><i>sed</i></strong> est un utilitaire qui parcourt un fichier texte ligne par ligne afin de lui appliquer un traitement ou un remplacement lorsque l'expression régulière est vérifiée.</h4>
     <p><code>sed 's/foo/bar/' file.txt</code> Transformer la première occurence 'foo' de chaque ligne par 'bar'.</p>
@@ -215,7 +224,7 @@
   </div>
 
   <div id="grep" class="block block-grep blue">
-    <a name="grep"></a>
+    <a id="grep"></a>
     <h2>grep</h2>
     <h4>La commande <strong><i>grep</i></strong> permet de rechercher une chaîne de caractères ou un motif dans un fichier.</h4>
     <dl>
@@ -232,7 +241,7 @@
   </div>
 
   <div id="find" class="block block-find dark-blue">
-    <a name="find"></a>
+    <a id="find"></a>
     <h2>find</h2>
     <h4>La commande <strong><i>find</i></strong> permet de chercher des fichiers et éventuellement d'exécuter des commandes dessus.</h4>
     <dl>
@@ -259,7 +268,7 @@
   </div>
 
   <div id="test" class="block block-test white">
-    <a name="test"></a>
+    <a id="test"></a>
     <h2>test</h2>
     <h4>La commande <strong>test</strong> permet comparer des chaines de caractères, des nombres et vérifier certaines propriétés de fichiers. Il est possible de simplifier son écriture en la remplaçant par des crochets [ ].</h4>
     <p><code>test -e foo.txt</code> tester si le fichier foo.txt existe.</p>
@@ -271,7 +280,7 @@
   </div>
 
   <div id="packages" class="block block-packages dark-green">
-    <a name="packages"></a>
+    <a id="packages"></a>
     <h2>Packages</h2>
     <h4>L'installation et la désinstallation de paquets sous Debian, Ubuntu et distribution dérivées peut se faire grâce à la commande <strong><i>apt</i></strong>.</h4>
     <p><code>apt-get update</code> Mettre à jour la liste des fichiers disponibles dans les dépôts APT.</p>
@@ -284,7 +293,7 @@
   </div>
 
   <div id="archives" class="block block-archives green">
-    <a name="archives"></a>
+    <a id="archives"></a>
     <h2>Archives</h2>
     <h4>Que ce soit pour compresser ou décompresser des fichiers ou des dossiers, cela se fait avec la commande <strong><i>tar</i></strong>.</h4>
     <dl>
@@ -307,7 +316,7 @@
   </div>
 
   <div id="diskspace" class="block block-diskspace light-green">
-    <a name="diskspace"></a>
+    <a id="diskspace"></a>
     <h2>Espace disque</h2>
     <p><code>du -sh dossier1 dossier2</code> connaitre l'espace disque utilisé des deux répertoires (<em>disk usage</em>).</p>
     <p><code>du -hc --max-depth=1</code> afficher l'espace disque utilisé des fichiers et répertoires contenu dans un répertoire.</p>
@@ -315,7 +324,7 @@
   </div>
 
   <div id="process" class="block block-process yellow">
-    <a name="process"></a>
+    <a id="process"></a>
     <h2>Gestion des processus</h2>
     <p><code>top</code> Classement en live des processus en cours triés par utilisation Proc, Mem ou Temps CPU.</p>
     <p><code>free</code> Afficher la mémoire libre.</p>
@@ -327,7 +336,7 @@
 
 <!--
   <div id="file" class="block block-file">
-    <a name="file"></a>
+    <a id="file"></a>
     <h2>Afficher un fichier</h2>
     <h4>Pour lire un fichier plusieurs commandes s'offrent à vous <strong>vi</strong>, <strong>cat</strong>, <strong>head</strong> ou encore <strong>tail</strong>.</h4>
     <p><code>cat foo.txt</code> retourne tout le fichier sur la sortie standard.</p>
@@ -339,18 +348,18 @@
 
 
   <div id="sort" class="block block-sort">
-    <a name="sort"></a>
+    <a id="sort"></a>
     <h2>sort</h2>
   </div>
 
   <div id="awk" class="block block-awk">
-    <a name="awk"></a>
+    <a id="awk"></a>
     <h2>awk</h2>
     <h4>Plus qu'une commande, <strong>awk</strong> est un programme complexe combinant les fonctions sed et grep.</h4>
   </div>
 
   <div id="pipe" class="block block-pipe">
-    <a name="pipe"></a>
+    <a id="pipe"></a>
     <h2>Pipes and Redirection</h2>
     You pipe a command to another command, and redirect it to a file.)
   {command} > {file}  Redirect output to a file, eg ls > list.txt writes directory to file.
@@ -361,7 +370,7 @@
   </div>
 
   <div id="various-command" class="block block-various-command">
-    <a name="various-command"></a>
+    <a id="various-command"></a>
     <h2>Commandes en vrac</h2>
     <h4>Quelques exemples de combinaisons de commandes ou de commandes complexes.</h4>
     <p><code>:w !sudo tee% > /dev/null</code></p>
@@ -369,7 +378,7 @@
 -->
 
   <div id="comment" class="block block-comment">
-    <a name="comment"></a>
+    <a id="comment"></a>
     <h2>Commentaires</h2>
     <div id="disqus_thread"></div>
     <script type="text/javascript">
